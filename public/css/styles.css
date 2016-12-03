@@ -1,0 +1,193 @@
+html
+{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before
+{
+    box-sizing: inherit;
+}
+
+.container
+{
+    width: 940px;
+    height: 100%;
+}
+
+.row
+{
+    height: 100%;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.content
+{
+    padding: 60px 0;
+}
+
+.heading
+{
+    font-size: 36px;
+    font-weight: 600; 
+
+    padding-left: 5px;
+
+    border-left: 5px solid #ff3800;
+}
+.heading__block
+{
+    display: flex;
+}
+.heading__white
+{
+    color: #fff;
+}
+
+p
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+span.geo
+{
+    font-size: 30px;
+}
+
+.hyphenate
+{
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto; 
+            hyphens: auto;
+
+        -ms-hyphens: auto;
+}
+
+a.order
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    padding: 15px;
+
+    transition: all .5s; 
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 30px 0;
+    background: #ff3800;
+}
+a.order:hover
+{
+    transition: all .5s; 
+
+    color: #ff3800;
+    border: 1px solid #ff3800;
+    background: #fff;
+}
+
+body
+{
+    font-family: 'Open Sans';
+}
+
+.header
+{
+    height: 90px;
+}
+.header__phone
+{
+    font-size: 24px;
+}
+.header__email
+{
+    font-size: 18px;
+
+    color: #6e6d6d;
+}
+.header__city
+{
+    font-weight: 300;
+}
+
+.nav
+{
+    height: 50px;
+
+    background: #00575e;
+}
+.nav__list
+{
+    margin: 0; 
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: space-between;
+}
+.nav__list a
+{
+    font-size: 14px;
+
+    padding: 20px; 
+
+    text-decoration: none;
+
+    color: #fff;
+}
+.nav__list a:hover
+{
+    padding: 20px; 
+
+    background: #ff3800;
+}
+
+.slider
+{
+    height: 490px;
+
+    border-bottom: 10px solid #00575e; 
+    background: url('../img/slider.png') 50% 50% no-repeat;
+}
+
+.advantages
+{
+    padding: 60px 0;
+
+    background: #00575e;
+}
+.advantages__block
+{
+    margin: 0;
+    padding: 0;
+}
+.advantages__block p
+{
+    font-size: 14px;
+
+    word-wrap: break-word; 
+
+    color: #fff;
+}
+.advantages__block__red
+{
+    color: #ff3800;
+}
+
+.target
+{
+    padding: 60px 0;
+}
+.target p
+{
+    font-weight: 300; 
+
+    text-align: justify;
+}
