@@ -1,50 +1,212 @@
+mixin block-more(text, text2, img)
+	a(href="#")
+		.block-more
+			img.block-more__image(src="#{img}", alt="")
+			.block-more__green.flex.fd.center-md.middle-md.center-sm.middle-sm.center-xs.middle-xs
+				p.block-more__green__text= text
+				p.block-more__green__text.big= text2	
+			
+mixin block-more2(text, img)
+	a(href="	")
+		.block-more
+			img.block-more__image(src="#{img}", alt="")
+			.block-more__green.flex.fd.center-md.middle-md.center-sm.middle-sm.center-xs.middle-xs
+				p.block-more__green__text= text
+			
+
+
 doctype
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(content='width=device-width, initial-scale=1.0, user-scalable=no', name='viewport')
 		title Гео
-		link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
+		link(rel="stylesheet", href="css/flexboxgrid.min.css")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+		link(rel="stylesheet", href="css/baguetteBox.min.css")
+		link(rel="stylesheet", href="css/tingle.min.css")
 		link(rel="stylesheet", href="css/styles.css")
+		link(rel="stylesheet", href="css/font.css")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic" rel="stylesheet")
+		script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-Ru")
 body
-	header.header
-		.container
-			.row.middle-md.center-md
-				.col-md-2
-					.header__logo
-						img(src="img/logo.png", alt="Logo")
-				.col-md-3
-					p.header__phone 8 (4872) 740-351
-				.col-md-2
-					a(href="#").order Заказать звонок
-				.col-md-3
-					p.header__email info@geo50rus.ru
-				.col-md-2
-					.header__city Россия, г.Тула 
-	nav.nav
-		.container
-			.row.middle-md
-				.col-md-12
-					ul.nav__list.flex
-						li
-							a(href="#") Главная
-						li
-							a(href="#") Геологические изыскания
-						li
-							a(href="#") Геодезические изыскания
-						li
-							a(href="#") Экология
-						li
-							a(href="#") Отзывы
-						li
-							a(href="#") Статьи
-						li
-							a(href="#") Контакты
-	block content
+	div#menu.slideout-menu
+		.menu__logo.flex.fd.center-sm.center-xs
+			.container
+				.row
+					.col-md-12.col-sm-12.col-xs-12
+						img(src="img/logo.png", alt="")
+						a(onclick="modal.open()").order Заказать звонок
+						p.header__email info@geo50rus.ru
+		nav.menu
+			ul.menu__list
+				li.menu__list__item
+					a.menu__list__item__link(href="index.html") Главная
+				li.menu__list__item
+					a.menu__list__item__link(href="index2.html") Геологические изыскания
+					ul.menu__list__sub
+						li.menu__list__sub__item
+							a.menu__list__sub__item__link(href="#") Цены
+				li.menu__list__item
+					a.menu__list__item__link(href="index3.html") Геодезические изыскания
+				li.menu__list__item
+					a.menu__list__item__link(href="article-inside.html") Экология
+				li.menu__list__item
+					a.menu__list__item__link(href="price.html") Цены
+				li.menu__list__item
+					a.menu__list__item__link(href="price.html") Отзывы
+				li.menu__list__item
+					a.menu__list__item__link(href="article.html") Статьи
+				li.menu__list__item
+					a.menu__list__item__link(href="contact.html") Контакты
 
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-	script(src="js/main.js")
+	div#panel
+		button.toggle-menu
+			div.icon-burger
+		header.header
+			.container
+				.row.middle-md.center-md.middle-sm.center-sm.middle-xs.center-xs
+					.col-md-2.col-sm-4.col-xs-12.start-md
+						.header__logo
+							a(href="/")
+								img(src="img/logo.png", alt="Logo")
+					.col-md-3.col-sm-4.col-xs-12
+						p.header__phone 8 (4872) 740-351
+					.col-md-2.col-sm-4.col-xs-12.hidden-sm
+						a(onclick="modal.open()").order Заказать звонок
+					.col-md-3.col-sm-6.col-xs-12.hidden-sm
+						p.header__email info@geo50rus.ru
+					.col-md-2.end-md.col-sm-4.col-xs-12
+						a(onclick="city.open()").header__city Россия, г.Тула 
+		nav.nav
+			.container
+				.row.middle-md
+					.col-md-12
+						ul.nav__list.flex
+							li.nav__list__item
+								a.nav__list__item__link(href="index.html") Главная
+							li.nav__list__item
+								a.nav__list__item__link(href="index2.html") Геологические изыскания
+							li.nav__list__item
+								a.nav__list__item__link(href="index3.html") Геодезические изыскания
+							li.nav__list__item
+								a.nav__list__item__link(href="article-inside.html") Экология
+							li.nav__list__item
+								a.nav__list__item__link(href="price.html") Цены
+							li.nav__list__item
+								a.nav__list__item__link(href="price.html") Отзывы
+							li.nav__list__item
+								a.nav__list__item__link(href="article.html") Статьи
+							li.nav__list__item
+								a.nav__list__item__link(href="contact.html") Контакты
+		block content
+		section.contact
+			.container
+				.row
+					.col-md-12.col-sm-12.col-xs-12
+						.heading__block.center-md.center-sm.center-xs
+								h2 Есть вопросы?
+					.col-md-1
+					.col-md-6.col-sm-12.col-xs-12
+						form.form
+							.row
+								.col-md-12.col-sm-12.col-xs-12
+									.row
+										.col-md-6.col-sm-12.col-xs-12
+											input.form__name(type="text" placeholder="Ваше имя")
+										.col-md-6.col-sm-12.col-xs-12
+											input.form__phone(type="tel" placeholder="Ваш телефон")
+								.col-md-12.col-sm-12.col-xs-12.top-md
+									textarea.form__massage(type="text" placeholder="Сообщение..." rows="2")
+								.col-md-12.col-sm-12.col-xs-12
+									input.order__form(type="submit" value="Отправить")
+					.col-md-4.col-sm-12.col-xs-12.bottom-md
+						.row.middle-sm
+							.col-md-12.col-sm-6.col-xs-12
+								.contact__phone
+									.row
+										.col-md-2
+											span.icon-phone 
+										.col-md-10
+											span 8 (800) 505-89-60
+								.contact__email
+									.row
+										.col-md-2
+											span.icon-email 
+										.col-md-10
+											span info@geo50rus.ru
+								.contact__marker
+									.row
+										.col-md-2
+											span.icon-marker 
+										.col-md-10
+											p.contact__marker__small Россия, Москва, ул. Щипок,<br> д. 16, строение 1
+							.col-md-12.col-sm-6.col-xs-12
+								.contact__social.flex
+										a(href="#").contact__social__youtube
+											span.icon-youtube
+												span.path1
+												span.path2
+												span.path3
+												span.path4
+												span.path5
+										a(href="#").contact__social__twitter
+											span.icon-twitter
+												span.path1
+												span.path2
+										a(href="#").contact__social__instagram
+											span.icon-instagram
+										a(href="#").contact__social__google
+											span.icon-google-plus
+						.col-md-1
+		footer.footer
+			.container
+				.row.center-md.center-sm.center-xs
+						.col-md-4
+							a(href="")
+								img(src="img/dev_logo.png", alt="")
+		.call-back(style="display: none")
+			form.form
+				.heading__block.center-md.center-sm.center-xs
+					h3 Заказать звонок
+				.row.center-md.center-sm.center-xs
+					.col-md-12.col-sm-12.col-xs-12
+						input.form__name(type="text" placeholder="Ваше имя")
+					.col-md-12.col-sm-12.col-xs-12
+						input.form__phone(type="tel" placeholder="Ваш телефон")
+					.col-md-12.col-sm-12.col-xs-12
+						input.order__form(type="submit" value="Отправить")
 
-	block script
+		.city(style="display: none;")
+			.header__city__block
+				ul
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+					li
+						a(href="#") Россия, г Тула
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+		script(src="js/slideout.min.js" defer)
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/1.1.0/bootstrap-native.min.js" defer)
+		script(src="js/baguetteBox.min.js" defer)
+		script(src="js/tingle.min.js" defer)
+		script(src="js/main.js" defer)
+
+
+		block script

@@ -1,0 +1,60 @@
+extends include/layout.jade
+
+block content
+	section.breadcrumb
+		.container
+			.row.middle-md
+				.col-md-12
+					span.breadcrumb__text Главная
+					span.breadcrumb__text Статьи
+	section.content__inside
+		.container
+			.row
+				.col-md-12
+					.heading__block.center-md
+						h1 Статьи
+				.col-md-12
+					.row
+						.col-md-4
+							+block-more2("Цены на различные виды инженерных изысканий для строительства в Краснодаре", "img/block-more.png")
+						.col-md-4
+							+block-more2("Экологических и Геофизических изысканий в Краснодаре и Краснодарском крае", "img/block-more.png")
+						.col-md-4
+							+block-more2("Проектирование и Геологические изыскания в Краснодаре", "img/block-more.png")
+						.col-md-4
+							+block-more2("Проведение инженерно-геологических изысканий в Краснодаре", "img/block-more.png")
+						.col-md-4
+							+block-more2("Изыскания и проектирование для строительства", "img/block-more.png")
+						.col-md-4
+							+block-more2("Стоимость геодезических изыскательских работ в Краснодаре", "img/block-more.png")
+						.col-md-4
+							+block-more2("Цены на геодезические съёмки и работи в Краснодаре", "img/block-more.png")
+						.col-md-4
+							+block-more2("Инженерная геология и проектирование домов и коттеджей", "img/block-more.png")
+						.col-md-4
+							+block-more2("Скважина своими руками", "img/block-more.png")
+				.col-md-12
+					section.pagination
+						.row.center-md
+							.col-md-2
+								.flex.end-md
+									.pagination__count 
+										span Страница 1 из 15
+							.col-md-3
+								ul.pagination__list.center-md
+									li.pagination__list__item.active
+										a.flex.center-md.middle-md(href="#") 1
+									li.pagination__list__item
+										a.flex.center-md.middle-md(href="#") 2
+									li.pagination__list__item
+										a.flex.center-md.middle-md(href="#") 3
+									li.pagination__list__item
+										a.flex.center-md.middle-md(href="#") 4
+									li.pagination__list__item
+										a.flex.center-md.middle-md(href="#") ...
+									li.pagination__list__item
+										a.flex.center-md.middle-md(href="#") 10
+							.col-md-2
+								.flex.start-md
+									.pagination__last 
+										a(href="#") Последняя

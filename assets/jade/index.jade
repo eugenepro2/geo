@@ -2,54 +2,257 @@ extends include/layout.jade
 
 block content
 	section.slider
+		video#bgvid(poster='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg', playsinline='', autoplay='', muted='', loop='')
+			source(src='http://thenewcode.com/assets/videos/polina.webm', type='video/webm')
+			source(src='http://thenewcode.com/assets/videos/polina.mp4', type='video/mp4')
+		.container
+			.row
+				.col-md-2.col-sm-2
+				.col-md-8.col-sm-8.col-xs-12
+					.slider__block
+						.heading__block.center-md
+							h2 Инженерные изыскания
+						p <span class="geo">G</span>EO50 Регион проводит почвенные эколические изыскания совместно с другими видами инженерных исследований или же отдельным комплексом работ. Компания готова предложить выполнение экологического консалтинга который включает в свой состав экологические исследования и экологическое проектирование (создание экологических проектов).
+						.row.middle-md.middle-sm
+							.col-md-6.col-sm-6.col-xs-12
+								p.slider__block__price от 30 000 руб.
+							.col-md-6.col-sm-6.col-xs-12.end-md
+								a.slider__block__more(href="#") Подробнее
+				.col-md-2.col-sm-2
 	section.content
 		.container
 			.row
-				.col-md-12
+				.col-md-12.col-sm-12.col-xs-12
 					.heading__block.center-md
-						h2.heading Инженерные изыскания от GEO50 Москва
+						h2 Инженерные изыскания от GEO50 Москва
 			.row
-				.col-md-12
+				.col-md-12.col-sm-12.col-xs-12
 					p <span class="geo">G</span>EO50 Регион проводит почвенные экологические изыскания совместно с другими видами инженерных исследований или же отдельным комплексом работ. Компания готова предложить выполнение экологического консалтинга который включает в свой состав экологические исследования и экологическое проектирование (создание экологических проектов).
 	section.advantages
 		.container
-			.row.center-md
-				.col-md-12
-					.heading__block.center-md
-						h2.heading.heading__white Наши преимущества
-				.col-md-2
+			.row.center-md.center-sm.center-xs
+				.col-md-12.col-sm-12.col-xs-12
+					.heading__block.center-md.center-sm.center-xs
+						h2.heading__white Наши преимущества
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/1.png", alt="")
-						p Наличие <span class="advantages__block__red">собственной лаборатории</span> для проведения исследований
-				.col-md-2
+						div.advantages__block__image
+							span.icon-flask
+						p.advantages__block__text Наличие <span class="advantages__block__red">собственной лаборатории</span> для проведения исследований
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/2.png", alt="")
-						p Наличие <span class="advantages__block__red">собственного оборудования</span> для проведения изысканий
-				.col-md-2
+						div.advantages__block__image
+							span.icon-shovel
+						p.advantages__block__text Наличие <span class="advantages__block__red">собственного оборудования</span> для проведения изысканий
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/3.png", alt="")
-						p Специалисты приступают к работе в течении <span class="advantages__block__red">2х</span> дней с момента подписания договора
-				.col-md-2
+						div.advantages__block__image
+							span.icon-worker
+						p.advantages__block__text Специалисты приступают к работе в течении <span class="advantages__block__red">2х</span> дней с момента подписания договора
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/4.png", alt="")
-						p <span class="advantages__block__red">Более 1000 проектов</span>, прошедших экспертизу и введенных в эксплуатацию
-				.col-md-2
+						div.advantages__block__image
+							span.icon-badge
+						p.advantages__block__text <span class="advantages__block__red">Более 1000 проектов</span>, прошедших экспертизу и введенных в эксплуатацию
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/5.png", alt="")
-						p За всё время работы компании <span class="advantages__block__red">ни одного</span> судебного иска
-				.col-md-2
+						div.advantages__block__image
+							span.icon-mallet
+						p.advantages__block__text За всё время работы компании <span class="advantages__block__red">ни одного</span> судебного иска
+				.col-md-2.col-sm-4.col-xs-6
 					figure.advantages__block
-						img(src="img/advantages/6.png", alt="")
-						p <span class="advantages__block__red">8 полных лет</span> на рынке – таких компаний <span class="advantages__block__red">меньше 20%</span> на рынке
+						div.advantages__block__image
+							span.icon-guarantee
+						p.advantages__block__text <span class="advantages__block__red">8 полных лет</span> на рынке – таких компаний <span class="advantages__block__red">меньше 20%</span> на рынке
 	section.target
 		.container
 			.row.center-md
-				.col-md-12
+				.col-md-12.col-sm-12.col-xs-12
 					.heading__block.center-md
-						h2.heading Цель проводимых работ
+						h2 Цель проводимых работ
 				.col-md-6
 					p Определение пространственной структуры, а также границы распространения, состава и мощности загрязнения окружающей природной среды, которое требует осуществления рекультивации или санации для конкретно обозначенных типов функционального использования земельного участка
 					p Разработка научно обоснованных рекомендаций по безопасному использованию или же перемещению грунтов и почв в процессе проведения строительных и земляных работ
 				.col-md-6
 					p Разработка плана мероприятий, целью которых является предотвращение, уменьшение или ликвидация опасного воздействия патогенных и санитарно-показательных микроорганизмов, радиоактивных и загрязняющих химических веществ, возбудителей паразитных болезней на организм людей, а также на объекты природной среды в процессе реализации проведения проектных решений либо строительно-монтажных работ на исследуемой территории.
 					p Предоставление выводов об уровне и характере загрязнения исследуемой территории
+	section.how-work.how-work__home
+		.container
+			.row.center-md.center-sm.center-xs
+				.col-md-12.col-sm-12.col-xs-12
+					.heading__block.center-md.center-sm.center-xs
+						h2 Как мы работаем
+				.col-md-3.col-sm-6.col-xs-6
+					figure.how-work__block
+						div.how-work__block__image
+							span.icon-speech
+						p.how-work__block__text Оставьте заявку или позвоните<br>нам<br><span class="how-work__block__red">8 (499) 409-89-38
+				.col-md-3.col-sm-6.col-xs-6
+					figure.how-work__block
+						div.how-work__block__image
+							span.icon-drawing
+						p.how-work__block__text Получите консультацию и согласуйте дату приезда бригады геологов
+				.col-md-3.col-sm-6.col-xs-6
+					figure.how-work__block
+						div.how-work__block__image
+							span.icon-icon
+							span.icon-contract
+						p.how-work__block__text Приём бригады на участке и подписание договора
+				.col-md-3.col-sm-6.col-xs-6
+					figure.how-work__block
+						div.how-work__block__image
+							span.icon-report
+						p.how-work__block__text Отчет и консультация уже<br>через <span class="how-work__block__red">7 дней
+	section.about
+		img.about__image(src="img/geology.png", alt="")
+		a(href="#")
+			.about__green
+				.container
+					.row.middle-md
+						.col-md-1
+						.col-md-10
+							.about__block
+								h3.about__block__heading Геологические изыскания
+								p.about__block__text.about__block__text--justify Компания GEO50Регион много лет занимается выполнением инженерно геологических изысканий в Москве.
+								span.more Подробнее
+								
+	section.about
+		img.about__image(src="img/geodesy.png", alt="")
+		a(href="")
+			.about__green.about__green__left
+				.container
+					.row.middle-md
+						.col-md-1
+						.col-md-10
+							.about__block
+								h3.about__block__heading Геодезические изыскания
+								p.about__block__text Выполнение геодезических работ в Москве входит в основную специализацию компании GEO50Регион. 
+								span.more Подробнее
+				.col-md-7
+	section.about.about__big
+		img.about__image(src="img/ecology.png", alt="")
+		a(href="#")
+			.about__green
+				.container
+					.row.middle-md
+						.col-md-1
+						.col-md-10
+							.about__block
+								h3.about__block__heading Экологические изыскания 
+								p.about__block__text Выполнение инженерно-эколо&shy;гических изысканий в Москве входит в основную специализа&shy;цию компании GEO50Регион. 
+								span.more Подробнее
+	include include/callback-button-home.jade
+	include include/gallery.jade
+	section.document
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.heading__block.center-md
+						h2 Документация и СРО
+				.col-md-3.col-sm-6.col-xs-12.center-md.center-sm.center-xs
+					.document__block
+						a(href="img/document-1.png"  rel="document").fancybox
+							img.document__block__link(src="img/document-1.png", alt="")
+						.flex.center-md.center-sm.center-xs
+							span.icon-pdf
+								span.path1
+								span.path2
+								span.path3
+							a.document__block__download(href="#") Скачать 
+				.col-md-3.col-sm-6.col-xs-12.center-md.center-sm.center-xs
+					.document__block
+						a(href="img/document-2.png"  rel="document").fancybox
+							img.document__block__link(src="img/document-2.png", alt="")
+						.flex.center-md.center-sm.center-xs
+							span.icon-pdf
+								span.path1
+								span.path2
+								span.path3
+							a.document__block__download(href="#") Скачать 
+				.col-md-3.col-sm-6.col-xs-12.center-md.center-sm.center-xs
+					.document__block
+						a(href="img/document-3.png"  rel="document").fancybox
+							img.document__block__link(src="img/document-3.png", alt="")
+						.flex.center-md.center-sm.center-xs
+							span.icon-pdf
+								span.path1
+								span.path2
+								span.path3
+							a.document__block__download(href="#") Скачать 
+				.col-md-3.col-sm-6.col-xs-12.center-md.center-sm.center-xs
+					.document__block
+						a(href="img/document-4.png"  rel="document").fancybox
+							img.document__block__link(src="img/document-4.png", alt="")
+						.flex.center-md.center-sm.center-xs
+							span.icon-pdf
+								span.path1
+								span.path2
+								span.path3
+							a.document__block__download(href="#") Скачать 
+	include include/callback-button-home.jade
+	section.review
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.heading__block.center-md
+						h2 Отзывы
+			.row.review__item.middle-sm
+				.col-md-3.col-sm-3.col-xs-12
+					.review__image
+						img(src="img/review/1.png", alt="")
+				.col-md-9.col-sm-9.col-xs-12
+					h3.review__heading Иван Степанов
+					p.review__text Купили с братом на двоих один огромный участок земли для застройки двух коттеджей. Решили разбить территорию на два участка. Обратились к вам для установления четких границ каждого из участков. Теперь все довольны. Планируем весной обратиться к вам еще раз, для бурения скважин и для возведения фундамента.
+			.row.review__item
+				.col-md-3.col-sm-3.col-xs-12
+					.review__image
+						img(src="img/review/2.png", alt="")
+				.col-md-9.col-sm-9.col-xs-12
+					h3.review__heading Людмила Матвиенкова 
+					p.review__text Всю свою жизнь я грезила о частном предпринимательстве. И вот в 45 лет решила построить небольшую лако-красочную фабрику. Обратилась в вашу компанию для проектировки плана мероприятий по снижению негативного воздействия фабрики на окружающую среду. Спасибо вам за сотрудничество и приемлемую стоимость услуг.
+			.row.review__item
+				.col-md-3.col-sm-3.col-xs-12
+					.review__image
+						img(src="img/review/3.png", alt="" style="top: -80px")
+				.col-md-9.col-sm-9.col-xs-12
+					h3.review__heading Дарья Иванова 
+					p.review__text Муж пообещал к юбилею нашей свадьбы построить коттедж. Так как поселок у нас маленький и весь омывается рекой, неотъемлемым стало прогнозирование подтопляемости. Обратились в вашу фирму и в течении недели прогноз был уже у нас на руках. Остались довольны проведенной работой. Советуем вас всем друзьям.
+	section.content.logo-company
+		.container
+			.row.middle-md
+				.col-md-12.col-sm-12.col-xs-12
+					.heading__block.center-md
+						h2 С кем мы работаем
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/1.png", alt="")
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/2.png", alt="")
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/3.png", alt="")
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/4.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/5.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/6.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/7.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/8.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/9.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/10.png", alt="")
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/11.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/12.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/13.png", alt="")
+				.col-md-3.col-sm-4.col-xs-4
+					img(src="img/company/14.png", alt="")
+				.col-md-2.col-sm-4.col-xs-4
+					img(src="img/company/15.png", alt="")
+
+
+

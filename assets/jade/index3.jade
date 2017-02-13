@@ -1,0 +1,160 @@
+extends include/layout.jade
+
+block content
+	section.breadcrumb
+		.container
+			.row.middle-md
+				.col-md-12
+					span.breadcrumb__text Главная
+					span.breadcrumb__text Геодезические изыскания
+				.col-md-12
+					.heading__block.center-md
+						h1 Геодезические изыскания
+	.container
+		.row
+			.col-md-3
+				section.sidebar
+					ul.sidebar__menu
+						li.sidebar__menu__item 
+							a(href="#") Геодезические изыскания
+							ul.sidebar__menu__sub
+								li.sidebar__menu__sub__item 
+									a(href="#") Инженерно-гидрометеорологичские исследования
+								li.sidebar__menu__sub__item 
+									a(href="#") Топографическая съемка
+						li.sidebar__menu__item 
+							a(href="#") Геологические изыскания
+							ul.sidebar__menu__sub
+								li.sidebar__menu__sub__item 
+									a(href="#") Геология земельного участка
+								li.sidebar__menu__sub__item  
+									a(href="#") Инженерно-гидрогеологические изыскания
+
+								li.sidebar__menu__sub__item 
+									a(href="#") Геологические исследования грунта
+						li.sidebar__menu__item 
+							a(href="#") Экологические изыскания
+			.col-md-9.col-sm-12.col-xs-12
+				.container
+					.row
+						.col-md-12.col-sm-12.col-xs-12
+							p Выполнение геодезических работ в Москве входит в основную специализацию компании GEO50Регион. Без этих работ проектировщикам и строителям невозможно определиться с точным местом для пятна застройки, обеспечить безопасность при возведении и эксплуатации объекта, эффективно решить проблемы, связанные с взаимодействием природной среды с потенциальным объектом и уже эксплуатируемой застройкой.
+							.heading__block.center-md.center-sm.center-xs
+								h3 Геодезические изыскания в Москве
+							p После согласования стоимости и подписания договора геодезисты зани-маются:
+							ol
+								li Изучением материалов по геодезии прошлых лет;
+								li Рекогносцировкой исследуемой местности или трассы;
+								li Топографической съемкой и вынесением в натуру;
+								li Составлением планов;
+								li Камеральной проверкой и составлением технического отчета.
+							include include/callback-button.jade
+							section.advantages.advantages__inside
+								.row.center-md.center-sm.center-xs
+									.col-md-12.col-sm-12.col-xs-12
+										.heading__block.center-md.center-sm.center-xs
+											h2.heading__white Наши преимущества
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-flask
+											p.advantages__block__text Наличие <span class="advantages__block__red">собственной лаборатории</span> для проведения исследований
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-shovel
+											p.advantages__block__text Наличие <span class="advantages__block__red">собственного оборудования</span> для проведения изысканий
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-worker
+											p.advantages__block__text Специалисты приступают к работе в течении <span class="advantages__block__red">2х</span> дней с момента подписания договора
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-badge
+											p.advantages__block__text <span class="advantages__block__red">Более 1000 проектов</span>, прошедших экспертизу и введенных в эксплуатацию
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-mallet
+											p.advantages__block__text За всё время работы компании <span class="advantages__block__red">ни одного</span> судебного иска
+									.col-md-4.col-sm-4.col-xs-12
+										figure.advantages__block
+											div.advantages__block__image
+												span.icon-guarantee
+											p.advantages__block__text <span class="advantages__block__red">8 полных лет</span> на рынке – таких компаний <span class="advantages__block__red">меньше 20%</span> на рынке
+							p Мы гарантируем высокую точность материалов по геодезии участка в Москве, в сочетании с оперативностью выполнения сложных исследований и оптимальной стоимостью работ.
+							p Среди преимуществ нашей компании назовем профессиональную подготовку специалистов по инженерной геодезии в Москве, оснащенность современным оборудованием и приборами, проведение исследований в собственной лаборатории грунтов.
+							table.table
+								tr
+									th Вид изысканий
+									th Объект (вид работ)
+									th Стоимость
+								tr
+									td(rowspan='3').table__sort Топографическая съемка
+									td Участок менее 15 соток
+									td 12 000 руб.
+								tr
+									td.table__green Участок до 25 соток
+									td.table__green 16 000 руб.
+								tr
+									td Сверка границ с кадастровым паспортом
+									td 8 000 руб.
+								tr
+									td(rowspan='3').table__sort Геодезические изыскания
+									td.table__green Площадный объект
+									td.table__green от 10 000 руб./ га
+								tr
+									td Линейное сооружение
+									td от 30 000 руб. / га
+								tr
+									td.table__green Сопровождение строительства
+									td.table__green от 70 000 руб. / га
+								tr
+									td(rowspan='3').table__sort Экологические изыскания
+									td Одиночное здание,детский сад, школа
+									td от 80 000 руб.
+								tr
+									td.table__green Ангар до 1 га
+									td.table__green 120 000 руб.
+								tr
+									td Газовая трасса до 20 км
+									td 150 000 руб.
+							p Наша компания занимается изучением геодезии в строительстве в Москве как на предпроектной стадии, так и в процессе возведения объекта. Выполнение работ по геодезическому сопровождению в строительстве в Москве необходимо для мониторинга строящихся конструкций и проверки соответствия их проектным данным.
+							p Мы оказываем услуги на основании технического задания заказчика, в полном соответствии с региональным законодательством и нормами строительных стандартов. Мы снабжаем заказчика исключительно проверенными данными, на основании которых можно без проблем получить разрешение на строительство.
+							include include/callback-button.jade
+							section.how-work.how-work__inside
+								.container
+									.row.center-md.center-sm.center-xs
+										.col-md-12.col-sm-12.col-xs-12
+											.heading__block.center-md.center-sm.center-xs
+												h2 Как мы работаем
+										.col-md-6.col-sm-6.col-xs-12
+											figure.how-work__block
+												div.how-work__block__image
+													span.icon-speech
+												p.how-work__block__text Оставьте заявку или позвоните<br>нам<br><span class="how-work__block__red">8 (499) 409-89-38
+										.col-md-6.col-sm-6.col-xs-12
+											figure.how-work__block
+												div.how-work__block__image
+													span.icon-drawing
+												p.how-work__block__text Получите консультацию и согласуйте дату приезда бригады геологов
+										.col-md-6.col-sm-6.col-xs-12
+											figure.how-work__block
+												div.how-work__block__image
+													span.icon-icon
+													span.icon-contract
+												p.how-work__block__text Приём бригады на участке и подписание договора
+										.col-md-6.col-sm-6.col-xs-12
+											figure.how-work__block
+												div.how-work__block__image
+													span.icon-report
+												p.how-work__block__text Отчет и консультация уже<br>через <span class="how-work__block__red">7 дней
+							include include/gallery.jade
+							section
+								.container
+									.row
+										.col-md-12
+											p Обращайтесь в компанию GEO50Регион, если вы решили заняться строительством дома на участке или вести хозяйственную деятельность. По всем вопросам, касающимся состава и стоимости геодезических изысканий в Москве, звоните по телефону 
+												span.red 8(499) 409-89-38.

@@ -4,39 +4,99 @@
 
 $red: #ff3800
 $dgreen: #00575e
+$green: #009393
+$lgreen: #47868b
 
 .container
-	width: 940px
+	width: 100%
+	padding: 0 2em
+	max-width: 1200px
 	height: 100%
 .row
 	height: 100%
 .flex
 	display: flex
+.fd
+	flex-direction: column
 
 //Гайдлайн
 .content
 	padding: 60px 0 
-.heading
+.content__inside
+	padding: 20px 0
+body
+	font-family: 'Open Sans'
+	line-height: 22px
+h1
+	font-size: 36px
+	font-weight: 400
+	padding-bottom: 5px
+	border-bottom: 5px solid $red
+	line-height: 35px
+h2
 	border-left: 5px solid $red
 	padding-left: 5px
 	font-size: 36px
 	font-weight: 600
-	&__block
-		display: flex
-	&__white
-		color: #fff
+	margin: 20px 0
+	line-height: 35px
+h3
+	border-left: 5px solid $red
+	padding-left: 5px
+	font-size: 24px
+	font-weight: 600
+	margin-bottom: 10px
+	line-height: 35px
+h4
+	font-size: 18
+	font-weight: 600
+	text-align: center
+	padding: 20px 0
+	line-height: 35px
+.without--border
+	border: none
+.heading__block
+	display: flex
+ol
+	list-style: decimal-leading-zero
+	text-align: left
+	li
+		font-weight: 300
+		font-size: 18px
+		padding: 10px 0
+		margin: 10px 0
+ul
+	text-align: left
+	li
+		font-weight: 300
+		font-size: 14px
+		padding: 10px 0
+		margin: 10px 0
 p
 	font-size: 18px
-	font-weight: 400
+	font-weight: 300
+a
+	cursor: pointer
+	text-decoration: none
+	&:hover, &:active, &:focus
+		color: #000
+		text-decoration: none
+section
+	padding: 60px 0
 span.geo
 	font-size: 30px
-.hyphenate
-	text-align:justify
-	hyphens: auto
-	-webkit-hyphens: auto
-	-ms-hyphens: auto
-	-moz-hyphens: auto
-a.order
+.date
+	font-weight: 400
+	color: #484848
+	margin: 30px 0
+.article-image
+	float: right
+	margin-left: 20px
+	box-shadow: 0 5px 9.5px 0.5px rgba(0, 0, 0, 0.45)
+.red
+	color: $red
+	font-weight: 600
+.order
 	background: $red
 	color: #fff
 	text-decoration: none
@@ -45,20 +105,35 @@ a.order
 	padding: 15px
 	border-radius: 30px 0px
 	border: 1px solid transparent
-	transition: all 0.5s
+	transition: background 0.3s, color 0.3s
 	&:hover
 		background: #fff
 		color: $red
 		border: 1px solid $red
-		transition: all 0.5s
+		transition: all 0.3s
+.more, .order__form
+	border: 2px solid #252525
+	color: #252525
+	font-size: 14px
+	padding: 10px
+	text-decoration: none
+	font-weight: 600
+	transition: background 0.3s, color 0.3s
+	&:hover
+		background: #fff
+		transition: background 0.3s, color 0.3s
+	&__gallery
+		color: $green
+		border-color: $green
+.order__form
+	color: $green
+	border-color: $green
 
-body
-	font-family: 'Open Sans'
 
 
 //Шапка
 .header
-	height: 90px
+	padding: 20px 0
 	&__phone
 		font-size: 24px
 	&__email
@@ -66,52 +141,746 @@ body
 		color: #6e6d6d
 	&__city
 		font-weight: 300
+		color: #6e6d6d
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		&:after
+			content: "\e917"
+			font-family: icomoon
+			transform: rotate(90deg)
+			display: inline-block
+			font-size: 15px
+			position: relative
+			top: 2px
+		&__block
+			ul
+				background: #f7f7f7
+				width: 100%
+				padding: 0
+				list-style: none
+				li
+					border: 1px solid $dgreen
+					font-weight: 300
+					padding: 5px 20px
+					text-align: center
+					&:hover
+						background: #117e7e
+					&:hover
+						a
+							color: #fff
+					a
+						color: #000
 
 
 //Навигация
 .nav
 	height: 50px
 	background: $dgreen
+	position: relative
+	z-index: 101
+	.container
+		max-width: 1240px
 	&__list
 		list-style: none
 		justify-content: space-between
 		padding: 0
 		margin: 0
-		a
-			color: #fff
-			font-size: 14px
-			text-decoration: none
-			padding: 20px
+		&__item
+			&__link
+				color: #fff
+				font-size: 14px
+				text-decoration: none
+				padding: 15px
+				transition: transform 0.3s
+				transform: scale(1)
+				display: inline-block
+				&:hover
+					background: $red
+					transform: scale(1.1)
+					color: #fff
+					transition: transform 0.3s
+//Мобильная навигаци
+.menu
+	&__logo
+		padding: 20px 0
+		.container
+			padding: 0 2em
+		.order	
+			display: inline-block
+			margin: 10px 0
+	&__list, &__list__sub
+		list-style: none
+		padding: 0
+		&__item
+			padding: 0
+			&__link
+				color: #000
+				display: block
+				padding: 10px
+				&:hover
+					background: rgba(0,0,0,0.2)
+					padding: 10px
+	&__list__sub
+		&__item__link
+			padding: 10px 10px 10px 20px
 			&:hover
-				background: $red
-				padding: 20px
+				padding: 10px 10px 10px 20px
+
+	
+
+
+
 
 
 //Слайдер
 .slider
-	height: 490px
-	background: url('../img/slider.png') 50% 50% no-repeat
+	position: relative
 	border-bottom: 10px solid $dgreen
+	overflow: hidden
+	//background: url('http://demosthenes.info/assets/images/polina.jpg') #000 no-repeat center center fixed
+	video
+		position: absolute
+		top: 0
+		width: 100%
+	&__block
+		position: relative
+		background: rgba(0, 87, 94, 0.85)
+		color: #fff
+		padding: 30px
+		&__more
+			background: $red
+			font-size: 20px
+			padding: 20px
+			color: #fff
+			display: inline-block
+		&__price
+			font-size: 30px
+			font-weight: 600
 
 //Наши преимущества
 .advantages
-	padding: 60px 0
 	background: $dgreen
+	color: #fff
 	&__block
-		margin: 0
+		margin: 30px 0
 		padding: 0
-		p
+		&__image
+			font-size: 70px
+		&__text
 			font-size: 14px
 			color: #fff
-			word-wrap: break-word
 		&__red
 			color: $red
+.advantages__inside
+	padding: 30px
+	background: #fff
+	color: #000
+	.advantages
+		&__block
+			&__image
+				color: $red
+			&__text
+				font-size: 14px
+				color: #000
+			&__red
+				color: $red
 // Цель проводимых работ
 .target
-	padding: 60px 0
-	p
-		text-align: justify
+		p
+			text-align: left
+			font-weight: 300
+
+// Как мы работаем
+.how-work
+	&__home
+		background: $dgreen
+		color: #fff
+		text-align: center
+	&__block
+		margin: 30px 0
+		padding: 0
+		&__image
+			font-size: 70px
+			height: 70px
+			.icon-icon
+				position: relative
+				font-size: 60px
+				bottom: 20px
+			.icon-contract
+				font-size: 60px
+		&__text
+			font-size: 14px
+		&__red
+			color: $red
+			font-weight: 600
+			font-size: 16px
+.how-work__inside
+	padding: 30px 0
+	.how-work
+		&__home
+			background: #fff
+			color: #000
+			text-align: center
+		&__block
+			margin: 0
+			padding: 0
+			&__image
+				font-size: 70px
+				color: #17868f
+			&__text
+				font-size: 14px
+			&__red
+				color: $red
+				font-weight: 600
+				font-size: 16px
+		
+
+//
+.about
+	padding: 0
+	position: relative
+	height: 478px
+	overflow: hidden
+	&__big
+		height: 494px
+	&__image
+		width: 100%
+		height: 101%
+		position: absolute
+		transition: transform 0.3s
+	&__green
+		background: rgba(0, 147, 147, 0.85)
+		position: absolute
+		height: 100%
+		width: 50%
+		right: 0
+		&__left
+			left: 0
+			right: 1px
+		&:hover .more
+			background: #fff
+			transition: background 0.3s
+	&__block
+		height: 100%
+		width: 100%
+		color: #fff
+		position: relative
+		&__green
+			height: 100%
+		&__heading
+			margin: 0
+			font-size: 27px
+			margin-bottom: 20px
+		&__text
+			font-size: 24px
+			text-align: left
+			font-weight: 300
+	&:hover .about__image
+		transform: scale(1.2)
+		transition: transform 0.3s
+
+
+
+
+// Кнопка обратного звонка
+.callback-button
+	padding: 0
+	margin: 18px 0
+	background: $green
+	transition: background 2s
+	&__text
+		display: block
+		padding: 15px 0
+		color: #fff
+		font-weight: 400
+		font-size: 18px
+		letter-spacing: 0.7px
+		&:hover
+			color: #fff
+	&:hover
+		background: $dgreen
+		transition: background 2s
+			
+.callback-button--home
+	margin: 0
+	
+
+//Галерея
+.gallery
+	background-image: radial-gradient(circle 939px at 50.97% 34.71%, rgba(0, 0, 0, 0.6) 0%, transparent 100%)
+	background-color: #313131
+	color: #fff
+	&__block
+		padding-bottom: 20px
+	&__image
+		position: relative
+		width: 100%
+		height: 101%
+	&__link
+		position: relative
+		display: block
+		overflow: hidden
+		&:hover .gallery__green
+			top: 0
+	&__green
+		background: rgba(0, 147, 147, 0.85)
+		position: absolute
+		width: 100%
+		height: 99%
+		top: -100%
+		left: 0
+		transition: top 0.3s
+		&__icon
+			font-size: 60px
+			color: #fff
+			height: 100%
+	&__none
+		display: none
+// Документация и СРО
+.document
+	&__block
+		margin: 30px 0
+		padding: 25px
+		border: 1px solid #dadada
+		box-shadow: 0 6px 13.1px 2.9px rgba(0, 0, 0, 0.13)
+		&__download
+			color: #1d1d1d
+			margin: 10px
+			display: block
+	.icon-pdf
+		font-size: 30px
+		margin-top: 4px
+
+
+//Отзывы
+.review
+	&__item
+		padding: 20px 0
+		margin: 30px 0
+	&__image
+		width: 220px
+		height: 220px
+		border-radius: 50%
+		position: relative
+		overflow: hidden
+		img
+			position: absolute
+			width: 100%
+			top: -30px
+	&__heading
+		font-size: 26px
+		font-weight: 600
+	&__text
+	 font-size: 18px
+	 font-weight: 300
+
+.logo-company
+		img
+			width: 100%
+//Есть вопросы?
+.contact
+	background: url('../img/contact-bg.png') 50% 50% no-repeat
+	color: #fff
+	background-size: cover
+	.form
+		&__name, &__phone, &__massage
+			background: rgba(0, 147, 147, 0.85)
+			border: none
+			padding: 10px
+			color: #000
+			font-weight: 300
+			font-size: 14px
+			width: 100%
+			margin-bottom: 10px
+		&__massage
+			resize: none
+		.order__form
+			width: 100%
+			background: transparent
+			margin-bottom: 10px
+			cursor: pointer
+			transition: background 0.3s, color 0.3s
+			&:hover
+				background: #fff
+				transition: background 0.3s, color 0.3s
+	&__phone, &__email
+		color: $red
+		font-size: 30px
+		margin-bottom: 20px
+	&__marker
+		color: $red
+		font-size: 35px
+		&__small
+			font-size: 18px
+			margin: 0
+	&__social
+		margin-top: 95px
+		justify-content: space-between
+		a
+			padding: 0
+			margin: 0
+			text-decoration: none
+			span
+				font-size: 60px
+		&__youtube
+			.icon-youtube:hover .path1::before
+				color: $green
+				transition: color 0.3s
+		&__twitter
+			.icon-twitter:hover .path1::before
+				color: $green
+				transition: color 0.3s
+		&__instagram
+			color: #50abf1
+			transition: color 0.3s
+			&:hover
+				color: $green
+				transition: color 0.3s
+		&__google
+			color: #dd4b39
+			transition: color 0.3s
+			&:hover
+				color: $green
+				transition: color 0.3s
+
+
+//Модальное окно
+.form
+	&__name, &__phone, &__massage
+		background: rgba(0, 147, 147, 0.85)
+		border: none
+		padding: 10px
+		color: #000
 		font-weight: 300
+		font-size: 14px
+		width: 50%
+		margin-bottom: 10px
+	.order__form
+		width: 50%
+		background: transparent
+		margin-bottom: 10px
+		cursor: pointer
+
+//Подвал
+.footer
+	background: #252525
+	height: 130px
+
+::-webkit-input-placeholder
+	color: #000
+::-moz-placeholder
+	color: #000
+:-ms-input-placeholder
+	color: #000
+:-moz-placeholder
+	color: #000
+
+
+
+//Хлебные крошки
+.breadcrumb
+	padding: 10px 0
+	.breadcrumb__text
+		font-size: 14px
+		font-weight: 300
+		&:not(:last-child):after
+			content: "\e917"
+			font-family: 'icomoon' !important
+			font-size: 10px
+			margin: 2px 5px
+
+
+//
+.block-more
+	position: relative
+	height: 305px
+	z-index: 2
+	overflow: hidden
+	margin: 10px 0
+	&__image
+		position: absolute
+		z-index: 1
+		height: 100%
+		left: 0
+		transition: transform 0.3s
+	&__green
+		position: absolute
+		z-index: 2
+		background: rgba(0, 87, 94, 0.75)
+		height: 100%
+		width: 100%
+		&__text
+			color: #fff
+			padding: 0 15px
+		.big
+			font-size: 24px
+			color: #fff
+	&:hover .block-more__image
+		transform: scale(1.2)
+		transition: transform 0.3s
+
+
+
+
+//Table
+.table
+	border: 2px solid $dgreen
+	width: 100%
+	height: 200px
+	border-spacing: 0
+	margin: 40px 0
+	th
+		background: $dgreen
+		color: #fff
+		font-size: 16px !important
+	th:not(:last-child)
+		border-right: 2px solid #fff
+	&__green
+		background: $lgreen
+	&__sort
+		font-size: 16px !important
+	th, td
+		border: 2px solid $dgreen
+		padding: 10px
+		text-align: center
+		font-size: 14px
+		font-weight: 400
+.table--big-font
+	td
+		font-size: 24px
+
+//Sidebar
+.sidebar
+	padding: 0
+	transition: all 0.3s ease-out
+	&__menu
+		list-style: none
+		margin: 5px 0
+		transition: all 0.3s ease-out
+		&__item
+			font-size: 18px
+			padding: 0
+	&__menu__sub
+		list-style: none
+		padding-top: 0
+		padding-left: 0
+		&__item
+			font-size: 14px
+			padding: 0px 10px
+			font-weight: 300
+	a
+		color: #000
+		text-decoration: none
+		position: relative
+		display: inline-block
+		margin: 7px 0
+		&:hover 
+			&:before
+				content: ""
+				border-left: 5px solid $red
+				padding-left: 5px
+				position: absolute
+				height: 100%
+				left: -8px
+	.active > a
+		position: relative
+		&:before
+			content: ""
+			border-left: 5px solid $red
+			padding-left: 5px
+			position: absolute
+			height: 100%
+			left: -8px
+
+//Пагинация
+.pagination
+	color: $dgreen
+	&__count, &__last
+		border: 1px solid $dgreen
+		padding: 6px
+		font-size: 14px
+		font-weight: 300
+		display: block
+		width: 80%
+		text-align: center
+	&__list
+		list-style: none
+		display: flex
+		margin: 0
+		padding: 0
+		&__item
+			border: 2px solid $dgreen
+			width: 30px
+			height: 30px
+			margin: 0 5px
+			font-weight: 300
+			& a
+				color: $dgreen
+				text-decoration: none
+				height: 100%
+		.active
+			background: $dgreen
+			a
+				color: #fff
+	&__last
+		position: relative
+		a
+			position: relative
+			right: 10px
+			color: $dgreen
+			text-decoration: none
+			&:before, &:after
+				content: "\e917"
+				font-family: icomoon
+				position: absolute
+				top: 1px
+				font-size: 17px
+			&:before
+				left: 88px
+
+
+// Адресс
+.adress
+	margin: 70px 0
+	&__1, &__2
+		border: 1px solid #117f7f
+		padding: 20px
+		text-align: center
+	&__1
+		border-bottom: none
+	&__bold
+		font-weight: 600
+
+//Автор
+.author
+	&__image
+		position: relative
+		overflow: hidden
+		width: 140px
+		height: 140px
+		border-radius: 50%
+		img
+			position: absolute
+			width: 100%
+	&__block
+		margin-left: 20px
+	&__name
+		font-size: 24px
+		font-weight: 400
+		margin: 5px 0
+	&__who
+		color: #484848
+		font-size: 14px
+		font-weight: 400
+		margin: 5px 0
+
+
+
+
+//Share
+.share
+	&__block
+		font-size: 50px
+		height: 100%
+		&__link
+			text-decoration: none
+			margin-left: 20px
+		.share
+			color: #117f7f
+		.facebook
+			color: #3a559f
+		.twitter
+		 color: #50abf1
+		.vk
+			color: #44678d
+		.google
+			color: #dd4b39
+
+.toggle-menu
+	display: none
+
+@media (min-width: 768px)
+	.sidebar__menu.affix
+		position: fixed !important
+		width: 263px
+		top: 0
+	.sidebar__menu.affix.affix-bottom
+		top: auto
+		bottom: 550px
+		opacity: 0
+
+@media (max-width: 1024px)
+	.slider
+		video
+			height: 100%
+			width: initial
+
+@media (max-width: 1045px)
+	.hidden-sm
+		display: none
+	.container
+		padding: 0 2em 0 4em
+	.about
+		& img
+			width: initial
+			height: 100%
+		&__green
+			width: 100%
+			height: 50%
+			bottom: 0
+	.gallery__block
+		padding: 10px
+	.review__image
+		width: 120px
+		height: 120px
+	.nav
+		display: none
+	.contact__social
+		margin: 40px 0
+	.sidebar
+		display: none
+	.container .container
+		padding: 0
+	.gallery
+		.container
+			padding: 20px
+	.share__block
+		flex-wrap: wrap
+	.toggle-menu
+		height: 100%
+		position: absolute
+		display: block
+		width: 30px
+		background: $green
+		top: 0
+		left: 0
+		border: none
+		z-index: 100
+		cursor: pointer
+		outline: none
+		div
+			width: 24px
+			height: 24px
+			color: #fff
+			position: absolute
+			display: block
+			top: 20px
+			left: 3px
+			bottom: auto
+			z-index: 100
+@media (max-width: 767px)
+	.about
+		& img
+			width: inherit
+			height: 100%
+		&__green
+			width: 100%
+			height: 100%
+	.article-image
+		float: none
+		width: 100%
+		margin-left: 0
 
 
 
@@ -122,6 +891,36 @@ body
 
 
 
+//Slideout
+.slideout-menu
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 256px
+	min-height: 100vh
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+	z-index: 0
+	display: none
+.slideout-menu-left
+	left: 0
 
+.slideout-menu-right
+	right: 0
 
+.slideout-panel
+	position: relative
+	z-index: 1
+	// ошибка affix will-change: transform
+	background-color: #FFF
+	min-height: 100vh
 
+.slideout-open
+	overflow: hidden
+	body, .slideout-panel
+		overflow: hidden
+	.slideout-menu
+		display: block
+
+.tingle-modal-box
+	width: initial

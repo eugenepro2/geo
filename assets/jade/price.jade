@@ -1,0 +1,182 @@
+extends include/layout.jade
+
+block content
+	section.breadcrumb
+		.container
+			.row.middle-md
+				.col-md-12
+					span.breadcrumb__text Главная
+					span.breadcrumb__text Геодезические изыскания
+				.col-md-12.col-sm-12.col-xs12
+					.heading__block.center-md.center-sm.center-xs
+						h1 Цены
+	.container
+		.row
+			.col-md-3#navbar
+				section.sidebar
+					ul#affix.sidebar__menu(data-spy="affix" data-target="#navbar" data-offset-bottom="650")
+						li.sidebar__menu__item 
+							a(href="#section1") Геология
+							ul.sidebar__menu__sub
+								li.sidebar__menu__sub__item 
+									a(href="#section2") Геология под строительство
+						li.sidebar__menu__item 
+							a(href="#section3") Геодезия
+							ul.sidebar__menu__sub
+								li.sidebar__menu__sub__item 
+									a(href="#section4") Топосъёмка
+								li.sidebar__menu__sub__item  
+									a(href="#section5") Гидрометеорологические изыскания
+						li.sidebar__menu__item 
+							a(href="#section6") Экология
+			.col-md-9.col-sm-12.col-xs-12(data-spy="scroll" data-target="#navbar" class="scrollspy-example")
+				.container
+					.row
+						.col-md-12.col-sm-12.col-xs-12#section1
+							table.table.table--big-font
+								tr
+									th Схема
+									th Количество<br> скважин, шт.
+									th Глубина, м.
+									th Цена, руб.
+								tr
+									td(rowspan='3') 
+										img(src="img/table/table-1.png", alt="")
+									td(rowspan='3') 2
+									td 8
+									td 32 500
+								tr
+									td 10
+									td 35 000
+								tr
+									td 12
+									td 38 500
+								tr
+									td(rowspan='3') 
+										img(src="img/table/table-2.png", alt="")
+									td(rowspan='3') 3
+									td 8 
+									td 38 500
+								tr
+									td 10
+									td 40 000
+								tr
+									td 12
+									td 48 000
+								tr
+									td(rowspan='3') 
+										img(src="img/table/table-3.png", alt="")
+									td(rowspan='3') 4
+									td 8
+									td 40 000
+								tr
+									td 10
+									td 54 000
+								tr
+									td 12
+									td 65 000
+								tr
+									td(rowspan='3') 
+										img(src="img/table/table-4.png", alt="")
+									td(rowspan='3') 5
+									td 8
+									td 56 000
+								tr
+									td 10
+									td 70 000
+								tr
+									td 12
+									td 84 000
+							section#section2
+								.heading__block.center-md
+									h3 Геология под строительство
+								table.table
+									tr
+										th Площадь пятна застройки
+										th 1-этажное здание без подвала
+										th 2-этажное здание без подвала, либо 1 этажное здание с подвалом
+										th 3-этажное здание без подвала, либо 2 этажное здание с подвалом
+									tr
+										td Менее 15х15 м
+										td 30 000 рублей (3 скважины по 6 м)
+										td 35 000 рублей (3 скважины по 8 м)
+										td 42 000 рублей (3 скважины по 10 м)
+									tr
+										td Более 15х15 м
+										td.table__green 35 000 рублей (4 скважины по 6 м)
+										td.table__green 44 000 рублей (4 скважины по 8)
+										td.table__green 50 000 рублей (4 скважины по 10 м)
+						.col-md-12.col-sm-12.col-xs-12#section3
+							.heading__block.center-md
+								h2 Геодезия
+							section#section4
+								.heading__block.center-md
+									h3 Топосъемка
+								table.table
+									tr
+										th Стоимость (цена) на топосъемку участка
+										th Без деревьев
+										th С деревьями (дендроплан)
+									tr
+										td Топографическая съемка земельного участка до 10 соток
+										td 13 000 руб
+										td 15 000 руб.
+									tr
+										td Топографическая съемка земельного участка от 10 до 15 соток
+										td.table__green 15 000 руб.
+										td.table__green 18 000 руб.
+									tr
+										td Топографическая съемка земельного участка от 15 до 20 соток
+										td 18 000 руб.
+										td 22 000 руб.
+									tr
+										td Топографическая съемка земельного участка от 20 до 30 соток
+										td.table__green 20 000 руб.
+										td.table__green 25 000 руб.
+									tr
+										td Топографическая съемка земельного участка более 30 соток
+										td от 20 000 руб.
+										td от 25 000 руб.
+									tr
+										td Топографическая съемка "под газ"
+										td.table__green 15 000 руб.
+										td.table__green -
+							section#section5
+								.heading__block.center-md
+									h3 Гидрометеорологические изыскания 
+								table.table#section4
+									tr
+										th Область
+										th Стоимость гидрогеологических работ
+									tr
+										td Москва
+										td от 30 000 руб. за 1 км;
+									tr
+										td Московская область
+										td.table__green от 20 000 руб. за 1 км;
+									tr
+										td Сопредельные области
+										td от 20 000 руб. за 1 км;
+						.col-md-12.col-sm-12.col-xs-12#section6
+							.heading__block.center-md
+								h2 Экология
+							table.table
+								tr
+									th Наименование и характеристика работ
+									th Цена, руб. (включая НДС).
+								tr
+									td Лабораторный анализ проб почв и грунтов — определение 7 тяжелых металлов (Hg, As, Ni, Cu, Zn, Cd, Pb), бенз(а)пирен, нефтепродукты, удельная активность естественных радионуклидов (ЕРН — K-40, Th-232, Ra-226) и Сs-137.
+									td 4 300
+								tr
+									td Определение 7 тяжелых металлов (см. выше), бенз(а)пирен, нефтепродукты.
+									td.table__green 3 300
+								tr
+									td Определение 7 тяжелых металлов (см. выше).
+									td 1700
+								tr
+									td Определение нефтепродуктов.
+									td.table__green 800
+
+
+
+
